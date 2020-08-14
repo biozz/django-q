@@ -54,6 +54,7 @@ class Cluster:
         # Start Sentinel
         self.stop_event = Event()
         self.start_event = Event()
+        self.broker = None
         self.sentinel = Process(
             target=Sentinel,
             args=(
